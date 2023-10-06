@@ -36,9 +36,9 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="btnCirculo" min="-2" pref="127" max="-2" attributes="0"/>
-                                      <Component id="btnRectangulo" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btnCuadrado" alignment="1" min="-2" pref="127" max="-2" attributes="0"/>
+                                      <Component id="btnCirculo" min="-2" pref="130" max="-2" attributes="0"/>
+                                      <Component id="btnRectangulo" min="-2" pref="130" max="-2" attributes="0"/>
+                                      <Component id="btnCuadrado" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -62,11 +62,11 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="lblDatos" min="-2" pref="51" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnRectangulo" min="-2" max="-2" attributes="0"/>
+              <Component id="btnRectangulo" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnCirculo" min="-2" pref="32" max="-2" attributes="0"/>
+              <Component id="btnCirculo" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnCuadrado" min="-2" max="-2" attributes="0"/>
+              <Component id="btnCuadrado" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnLimpiar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>

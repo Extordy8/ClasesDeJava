@@ -4,6 +4,7 @@
  */
 package vjv.figurasgeometricas;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.text.DecimalFormat;
 import java.util.Set;
 import javax.swing.*;
@@ -101,9 +102,9 @@ public class FigurasGeometricas extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(70, 70, 70)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(btnCirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(btnRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(btnCuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(btnCirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnCuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(23, 23, 23)
                                     .addComponent(lblDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -118,11 +119,11 @@ public class FigurasGeometricas extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnCirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnCuadrado)
+                .addComponent(btnCuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnLimpiar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -208,6 +209,7 @@ public class FigurasGeometricas extends javax.swing.JFrame {
 
     private void btnRectanguloMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRectanguloMouseEntered
         // TODO add your handling code here:
+     
         btnRectangulo.setBackground(Color.YELLOW);
         btnRectangulo.setBorder(new LineBorder(Color.YELLOW));
         btnRectangulo.setForeground(Color.LIGHT_GRAY);
@@ -216,6 +218,7 @@ public class FigurasGeometricas extends javax.swing.JFrame {
 
     private void btnRectanguloMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRectanguloMouseExited
         // TODO add your handling code here:
+      
         btnRectangulo.setBackground(Color.LIGHT_GRAY);
         btnRectangulo.setBorder(new LineBorder(Color.LIGHT_GRAY));
         btnRectangulo.setForeground(Color.BLACK);
