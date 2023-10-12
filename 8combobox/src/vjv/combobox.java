@@ -4,6 +4,8 @@
  */
 package vjv;
 
+import java.awt.Color;
+
 /**
  *
  * @author Yo
@@ -27,7 +29,7 @@ public class combobox extends javax.swing.JFrame {
     private void initComponents() {
 
         cboColores = new javax.swing.JComboBox<>();
-        lblInformacion = new javax.swing.JLabel();
+        lblColor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,7 +41,7 @@ public class combobox extends javax.swing.JFrame {
             }
         });
 
-        lblInformacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblColor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -52,7 +54,7 @@ public class combobox extends javax.swing.JFrame {
                         .addComponent(cboColores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addComponent(lblInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblColor, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -61,7 +63,7 @@ public class combobox extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addComponent(cboColores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
-                .addComponent(lblInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblColor, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
@@ -70,11 +72,17 @@ public class combobox extends javax.swing.JFrame {
 
     private void cboColoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboColoresActionPerformed
         // TODO add your handling code here:
-        String mensaje="El color elegido es  ";
-        
-        mensaje=mensaje+cboColores.getSelectedItem().toString() ;
-        
-        lblInformacion.setText(mensaje);
+        lblColor.setOpaque(true);        
+        if(cboColores.getSelectedIndex()== 0)
+        {
+            lblColor.setBackground(Color.decode("#9F33FF"));
+        }
+        if(cboColores.getSelectedIndex() == 1){
+                lblColor.setBackground(Color.decode("#FC33FF"));
+        }
+        if(cboColores.getSelectedIndex() == 2){
+                lblColor.setBackground(Color.decode("#C7650D"));
+        }
     }//GEN-LAST:event_cboColoresActionPerformed
 
     /**
@@ -105,15 +113,13 @@ public class combobox extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new combobox().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new combobox().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cboColores;
-    private javax.swing.JLabel lblInformacion;
+    private javax.swing.JLabel lblColor;
     // End of variables declaration//GEN-END:variables
 }
