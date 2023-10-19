@@ -13,7 +13,9 @@ public class ProductosQuimicos extends javax.swing.JFrame {
     /**
      * Creates new form ProductosQuimicos
      */
-    int Litros=0, Agua=0,Sales=0,Detergente=0,Densidad=0;
+    int Litros=0, Detergente=0,Densidad=0,Agua;
+    Double Sales;
+    
     public ProductosQuimicos() {
         initComponents();
         
@@ -48,6 +50,7 @@ public class ProductosQuimicos extends javax.swing.JFrame {
         jLabel1.setText("Litros a fabricar:");
 
         slLitros.setMajorTickSpacing(5);
+        slLitros.setMinimum(1);
         slLitros.setPaintTicks(true);
         slLitros.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -99,8 +102,8 @@ public class ProductosQuimicos extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblSales, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                    .addComponent(lblAgua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblAgua, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                    .addComponent(lblSales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(128, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -111,10 +114,10 @@ public class ProductosQuimicos extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(lblAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(lblSales, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                    .addComponent(lblSales, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         lblLitros.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -185,8 +188,8 @@ public class ProductosQuimicos extends javax.swing.JFrame {
         // TODO add your handling code here:
         Litros=slLitros.getValue();
         lblLitros.setText(String.valueOf(Litros)); 
-        Agua=2*Litros+Detergente/Densidad;
-        Sales=(Detergente*Litros)/(100*Densidad);
+        Agua = 2 * Litros + Detergente / Densidad;
+        Sales =(double) (Detergente * Litros) / (100 * Densidad);
         lblAgua.setText(String.valueOf(Agua));
         lblSales.setText(String.valueOf(Sales));
     }//GEN-LAST:event_slLitrosStateChanged
@@ -195,8 +198,8 @@ public class ProductosQuimicos extends javax.swing.JFrame {
         // TODO add your handling code here:
         Detergente=slDetergente.getValue();
         lblDetergente.setText(String.valueOf(Detergente));
-        Agua=2*Litros+Detergente/Densidad;
-        Sales=(Detergente*Litros)/(100*Densidad);
+        Agua = 2 * Litros + Detergente / Densidad;
+        Sales = (double)(Detergente * Litros) / (100 * Densidad);
         lblAgua.setText(String.valueOf(Agua));
         lblSales.setText(String.valueOf(Sales));
     }//GEN-LAST:event_slDetergenteStateChanged
@@ -205,8 +208,8 @@ public class ProductosQuimicos extends javax.swing.JFrame {
         // TODO add your handling code here:
         Densidad=slDensidad.getValue();
         lblDensidad.setText(String.valueOf(Densidad));
-        Agua=2*Litros+Detergente/Densidad;
-        Sales=(Detergente*Litros)/(100*Densidad);
+        Agua = 2 * Litros + Detergente / Densidad;
+        Sales = (double)(Detergente * Litros) / (100 * Densidad);
         lblAgua.setText(String.valueOf(Agua));
         lblSales.setText(String.valueOf(Sales));
     }//GEN-LAST:event_slDensidadStateChanged
@@ -242,6 +245,7 @@ public class ProductosQuimicos extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ProductosQuimicos().setVisible(true);
+                
             }
         });
     }
