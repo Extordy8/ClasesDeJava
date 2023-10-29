@@ -13,8 +13,8 @@ public class ProductosQuimicos extends javax.swing.JFrame {
     /**
      * Creates new form ProductosQuimicos
      */
-    int Litros=0, Detergente=0,Densidad=0,Agua;
-    Double Sales;
+    int Litros=1, Detergente=1,Densidad=1;
+    Double Sales,Agua;
     
     public ProductosQuimicos() {
         initComponents();
@@ -187,8 +187,8 @@ public class ProductosQuimicos extends javax.swing.JFrame {
     private void slLitrosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slLitrosStateChanged
         // TODO add your handling code here:
         Litros=slLitros.getValue();
-        lblLitros.setText(String.valueOf(Litros)); 
-        Agua = 2 * Litros + Detergente / Densidad;
+        lblLitros.setText(""+Litros); 
+        Agua =(double) 2 * Litros + Detergente / Densidad;
         Sales =(double) (Detergente * Litros) / (100 * Densidad);
         lblAgua.setText(String.valueOf(Agua));
         lblSales.setText(String.valueOf(Sales));
@@ -197,8 +197,8 @@ public class ProductosQuimicos extends javax.swing.JFrame {
     private void slDetergenteStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slDetergenteStateChanged
         // TODO add your handling code here:
         Detergente=slDetergente.getValue();
-        lblDetergente.setText(String.valueOf(Detergente));
-        Agua = 2 * Litros + Detergente / Densidad;
+        lblDetergente.setText(""+Detergente);
+        Agua =(double) 2 * Litros + Detergente / Densidad;
         Sales = (double)(Detergente * Litros) / (100 * Densidad);
         lblAgua.setText(String.valueOf(Agua));
         lblSales.setText(String.valueOf(Sales));
@@ -207,8 +207,8 @@ public class ProductosQuimicos extends javax.swing.JFrame {
     private void slDensidadStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slDensidadStateChanged
         // TODO add your handling code here:
         Densidad=slDensidad.getValue();
-        lblDensidad.setText(String.valueOf(Densidad));
-        Agua = 2 * Litros + Detergente / Densidad;
+        lblDensidad.setText(""+ Densidad);
+        Agua =(double) 2 * Litros + Detergente / Densidad;
         Sales = (double)(Detergente * Litros) / (100 * Densidad);
         lblAgua.setText(String.valueOf(Agua));
         lblSales.setText(String.valueOf(Sales));
