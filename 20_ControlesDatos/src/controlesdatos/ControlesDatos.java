@@ -48,8 +48,53 @@ public class ControlesDatos extends JFrame implements ActionListener{
         
         tbtnM=new JToggleButton("M");
         tbtnM.setBounds(100, 90, 50, 30);
-        
+        tbtnM.addActionListener(this);
         add(tbtnM);
+        
+        tbtnF=new JToggleButton("F");
+        tbtnF.setBounds(155, 90, 50, 30);
+        tbtnF.addActionListener(this);
+        add(tbtnF);
+        
+        lblE=new JLabel("Edad:    ");
+        lblE.setBounds(15, 130, 80, 30);
+        add(lblE);
+        
+        spnEdad=new JSpinner();
+        spnEdad.setBounds(100, 130, 80, 30);
+        spnEdad.setModel(new SpinnerNumberModel(1,1,100,1));
+        add(spnEdad);
+        
+        lblT=new JLabel("Telefono:    ");
+        lblT.setBounds(15, 130, 80, 30);
+        add(lblT);
+        
+        ftxtTel= new JFormattedTextField();
+        ftxtTel.setBounds(100, 170, 100, 30);
+        
+        try{
+            ftxtTel.setFormatterFactory(new DefaultFormatterFactory(new MaskFormatter("##########")));
+        }catch (java.text.ParseException ex){
+            ex.printStackTrace();
+        }
+        add(ftxtTel);
+        
+        lblCE=new JLabel("Correo Electronico");
+        lblCE.setBounds(15, 210, 150, 30);
+        add(lblCE);
+        
+        txtCE=new JTextField("");
+        txtCE.setBounds(170, 210, 245, 30);
+        add(txtCE);
+        
+        lblC=new JLabel("Contraseña:  ");
+        lblC.setBounds(15, 250, 100, 30);
+        add(lblC);
+        
+        pfl=new JPasswordField("");
+        pfl.setBounds(120, 250, 120, 30);
+        add(pfl);
+        
     }
     
     public static void main(String[] args) {
