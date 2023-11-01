@@ -4,9 +4,7 @@
  */
 package controlesdatos;
 import java.awt.event.ActionEvent;
-import java.awt.event.AWTEventListener;
 import java.awt.event.ActionListener;
-import java.text.ParseException;
 import javax.swing.*;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
@@ -24,7 +22,7 @@ public class ControlesDatos extends JFrame implements ActionListener{
     private JSpinner spnEdad;
     private JFormattedTextField ftxtTel;
     private JPasswordField pfl;
-    private JTextArea tstal;
+    private JTextArea txtal;
     private String genero;
     
     public ControlesDatos(){
@@ -66,7 +64,7 @@ public class ControlesDatos extends JFrame implements ActionListener{
         add(spnEdad);
         
         lblT=new JLabel("Telefono:    ");
-        lblT.setBounds(15, 130, 80, 30);
+        lblT.setBounds(15, 170, 80, 30);
         add(lblT);
         
         ftxtTel= new JFormattedTextField();
@@ -95,10 +93,65 @@ public class ControlesDatos extends JFrame implements ActionListener{
         pfl.setBounds(120, 250, 120, 30);
         add(pfl);
         
+         btnG = new JButton("Guardar");
+         btnG.setBounds(315, 50, 100, 30);
+         btnG.addActionListener(this);
+         add(btnG);
+         
+         btnL = new JButton("Limpiar");
+         btnL.setBounds(315, 90, 100, 30);
+         btnL.addActionListener(this);
+         add(btnL);
+         
+        txtal = new JTextArea(" ");
+        txtal.setBounds(15, 300, 400, 150);
+        add(txtal);
     }
     
     public static void main(String[] args) {
         // TODO code application logic here
+        ControlesDatos ventana=new ControlesDatos();
+        ventana.setTitle("Controles Datos");
+         ventana.setSize(460, 500);
+         ventana.setLayout(null);
+         ventana.setDefaultCloseOperation(EXIT_ON_CLOSE);
+         ventana.setVisible(true);
     }
-    
-}
+    @Override
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()==tbtnM){
+            if(tbtnM.isSelected()) genero="M";
+        }
+        if(ae.getSource()==tbtnF){
+            if(tbtnF.isSelected()) genero="F";
+        }
+        if(ae.getSource()==btnG){
+            String salida="",nombre="",correo="",tel="",edad="";
+        char []contra;
+        
+        nombre=txtN.getText();
+        tel=ftxtTel.getText();
+        edad=spnEdad.getValue().toString();
+        correo=txtCE.getText();
+        contra=pfl.getPassword();
+        
+        salida=salida +"\nNombre:  "+nombre+"\nGenero:  "+genero+"\nEdad:  "+edad
+                +"\nTelefono:  "+tel+"\nCorreo:  :  "+correo+"\nContraseña:"+contra;
+        
+                txtal.setText(salida);
+                
+                txtN.setText("");
+                txtN.requestFocus();
+                ftxtTel.setText("");
+                spnEdad.setValue(1);
+                txtCE.setText("");
+                pfl.setText("");
+                
+                tbtnM.setSelected(false);
+                tbtnF.setSelected(false);
+        }
+        if(ae.getSource()==btnL){
+        txtal.setText("");
+        }
+        }
+    }
