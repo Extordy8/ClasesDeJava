@@ -4,6 +4,8 @@
  */
 package luces;
 
+import javax.swing.JCheckBox;
+
 /**
  *
  * @author Yo
@@ -39,8 +41,17 @@ public class luces extends javax.swing.JFrame {
         chkO3Sec = new javax.swing.JCheckBox();
         chkO3Seg = new javax.swing.JCheckBox();
         jPanel4 = new javax.swing.JPanel();
+        lblLuzOficina1Principal = new javax.swing.JLabel();
+        lblLuzOficina1Secundaria = new javax.swing.JLabel();
+        lblLuzOficina1Seguridad = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        lblLuzOficina2Primaria = new javax.swing.JLabel();
+        lblLuzOficina2Secundaria = new javax.swing.JLabel();
+        lblLuzOficina2Seguridad = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        lblLuzOficina3Principal = new javax.swing.JLabel();
+        lblLuzOficina3Secundaria = new javax.swing.JLabel();
+        lblLuzOficina3Seguridad = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         MenActivacion = new javax.swing.JMenu();
         ItemMenuApagarTodas = new javax.swing.JMenuItem();
@@ -165,61 +176,163 @@ public class luces extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Luces oficina 1"));
+
+        lblLuzOficina1Principal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblLuzOficina1Secundaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblLuzOficina1Seguridad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 141, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblLuzOficina1Seguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(lblLuzOficina1Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblLuzOficina1Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 154, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(lblLuzOficina1Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblLuzOficina1Secundaria, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblLuzOficina1Seguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Luces oficina 2"));
+
+        lblLuzOficina2Primaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblLuzOficina2Secundaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblLuzOficina2Seguridad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 142, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(lblLuzOficina2Primaria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(lblLuzOficina2Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblLuzOficina2Seguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 141, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(lblLuzOficina2Primaria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblLuzOficina2Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblLuzOficina2Seguridad, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Luces oficina 3"));
+
+        lblLuzOficina3Principal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblLuzOficina3Secundaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblLuzOficina3Seguridad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 143, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(lblLuzOficina3Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(lblLuzOficina3Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblLuzOficina3Seguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(lblLuzOficina3Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblLuzOficina3Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblLuzOficina3Seguridad, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         MenActivacion.setText("Activación");
 
         ItemMenuApagarTodas.setText("Apagar Todas");
+        ItemMenuApagarTodas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuApagarTodasActionPerformed(evt);
+            }
+        });
         MenActivacion.add(ItemMenuApagarTodas);
 
         ItemMenuEncenderTodas.setText("EncenderTodas");
+        ItemMenuEncenderTodas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuEncenderTodasActionPerformed(evt);
+            }
+        });
         MenActivacion.add(ItemMenuEncenderTodas);
         MenActivacion.add(jSeparator1);
 
         MenuDia.setText("Dia");
 
         ItemMenuDiaOficina1.setText("Oficina 1");
+        ItemMenuDiaOficina1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuDiaOficina1ActionPerformed(evt);
+            }
+        });
         MenuDia.add(ItemMenuDiaOficina1);
 
         ItemMenuDiaOficina2.setText("Oficina 2");
+        ItemMenuDiaOficina2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuDiaOficina2ActionPerformed(evt);
+            }
+        });
         MenuDia.add(ItemMenuDiaOficina2);
 
         ItemMenuDiaOficina3.setText("Oficina 3");
+        ItemMenuDiaOficina3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuDiaOficina3ActionPerformed(evt);
+            }
+        });
         MenuDia.add(ItemMenuDiaOficina3);
         MenuDia.add(jSeparator4);
 
         ItemMenuDiaOficinaTodas.setText("Todas");
+        ItemMenuDiaOficinaTodas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuDiaOficinaTodasActionPerformed(evt);
+            }
+        });
         MenuDia.add(ItemMenuDiaOficinaTodas);
 
         MenActivacion.add(MenuDia);
@@ -227,16 +340,36 @@ public class luces extends javax.swing.JFrame {
         MenuNoche.setText("Noche");
 
         ItemMenuNocheOficina1.setText("Oficina 1");
+        ItemMenuNocheOficina1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuNocheOficina1ActionPerformed(evt);
+            }
+        });
         MenuNoche.add(ItemMenuNocheOficina1);
 
         ItemMenuNocheOficina2.setText("Oficina 2");
+        ItemMenuNocheOficina2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuNocheOficina2ActionPerformed(evt);
+            }
+        });
         MenuNoche.add(ItemMenuNocheOficina2);
 
         ItemMenuNocheOficina3.setText("Oficina 3");
+        ItemMenuNocheOficina3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuNocheOficina3ActionPerformed(evt);
+            }
+        });
         MenuNoche.add(ItemMenuNocheOficina3);
         MenuNoche.add(jSeparator5);
 
         ItemMenuNocheOficinaTodas.setText("Todas");
+        ItemMenuNocheOficinaTodas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuNocheOficinaTodasActionPerformed(evt);
+            }
+        });
         MenuNoche.add(ItemMenuNocheOficinaTodas);
 
         MenActivacion.add(MenuNoche);
@@ -250,6 +383,11 @@ public class luces extends javax.swing.JFrame {
         MenInfo.setText("Info");
 
         ItemMenuPrincipales.setText("Principales");
+        ItemMenuPrincipales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuPrincipalesActionPerformed(evt);
+            }
+        });
         MenInfo.add(ItemMenuPrincipales);
 
         ItemMenuSecundarias.setText("Secundarias");
@@ -271,42 +409,147 @@ public class luces extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(32, 32, 32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(82, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(45, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ItemMenuApagarTodasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuApagarTodasActionPerformed
+        // TODO add your handling code here:
+        chkO1Pri.setSelected(false);
+        chkO1Sec.setSelected(false);
+        chkO1Seg.setSelected(false);
+        chkO2Pri.setSelected(false);
+        chkO2Sec.setSelected(false);
+        chkO2Seg.setSelected(false);
+        chkO3Pri.setSelected(false);
+        chkO3Sec.setSelected(false);
+        chkO3Seg.setSelected(false);
+       
+    }//GEN-LAST:event_ItemMenuApagarTodasActionPerformed
+
+    private void ItemMenuEncenderTodasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuEncenderTodasActionPerformed
+        // TODO add your handling code here:
+        chkO1Pri.setSelected(true);
+        chkO1Sec.setSelected(true);
+        chkO1Seg.setSelected(true);
+        chkO2Pri.setSelected(true);
+        chkO2Sec.setSelected(true);
+        chkO2Seg.setSelected(true);
+        chkO3Pri.setSelected(true);
+        chkO3Sec.setSelected(true);
+        chkO3Seg.setSelected(true);
+    }//GEN-LAST:event_ItemMenuEncenderTodasActionPerformed
+
+    private void ItemMenuDiaOficina1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuDiaOficina1ActionPerformed
+        // TODO add your handling code here:
+        chkO1Pri.setSelected(true);
+        chkO1Sec.setSelected(true);
+        chkO1Seg.setSelected(false);
+    }//GEN-LAST:event_ItemMenuDiaOficina1ActionPerformed
+
+    private void ItemMenuDiaOficina2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuDiaOficina2ActionPerformed
+        // TODO add your handling code here:
+        chkO2Pri.setSelected(true);
+        chkO2Sec.setSelected(true);
+        chkO2Seg.setSelected(false);
+    }//GEN-LAST:event_ItemMenuDiaOficina2ActionPerformed
+
+    private void ItemMenuDiaOficina3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuDiaOficina3ActionPerformed
+        // TODO add your handling code here:
+        chkO3Pri.setSelected(true);
+        chkO3Sec.setSelected(true);
+        chkO3Seg.setSelected(false);
+    }//GEN-LAST:event_ItemMenuDiaOficina3ActionPerformed
+
+    private void ItemMenuDiaOficinaTodasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuDiaOficinaTodasActionPerformed
+        // TODO add your handling code here:
+        chkO1Pri.setSelected(true);
+        chkO1Sec.setSelected(true);
+        chkO1Seg.setSelected(false);
+        chkO2Pri.setSelected(true);
+        chkO2Sec.setSelected(true);
+        chkO2Seg.setSelected(false);
+        chkO3Pri.setSelected(true);
+        chkO3Sec.setSelected(true);
+        chkO3Seg.setSelected(false);
+    }//GEN-LAST:event_ItemMenuDiaOficinaTodasActionPerformed
+
+    private void ItemMenuNocheOficina1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuNocheOficina1ActionPerformed
+        // TODO add your handling code here:
+        chkO1Pri.setSelected(false);
+        chkO1Sec.setSelected(false);
+        chkO1Seg.setSelected(true);
+    }//GEN-LAST:event_ItemMenuNocheOficina1ActionPerformed
+
+    private void ItemMenuNocheOficina2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuNocheOficina2ActionPerformed
+        // TODO add your handling code here:
+        chkO2Pri.setSelected(false);
+        chkO2Sec.setSelected(false);
+        chkO2Seg.setSelected(true);
+    }//GEN-LAST:event_ItemMenuNocheOficina2ActionPerformed
+
+    private void ItemMenuNocheOficina3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuNocheOficina3ActionPerformed
+        // TODO add your handling code here:
+        chkO3Pri.setSelected(false);
+        chkO3Sec.setSelected(false);
+        chkO3Seg.setSelected(true);
+    }//GEN-LAST:event_ItemMenuNocheOficina3ActionPerformed
+
+    private void ItemMenuNocheOficinaTodasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuNocheOficinaTodasActionPerformed
+        // TODO add your handling code here:
+        chkO1Pri.setSelected(false);
+        chkO1Sec.setSelected(false);
+        chkO1Seg.setSelected(true);
+        chkO2Pri.setSelected(false);
+        chkO2Sec.setSelected(false);
+        chkO2Seg.setSelected(true);
+        chkO3Pri.setSelected(false);
+        chkO3Sec.setSelected(false);
+        chkO3Seg.setSelected(true);
+    }//GEN-LAST:event_ItemMenuNocheOficinaTodasActionPerformed
+
+    private void ItemMenuPrincipalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuPrincipalesActionPerformed
+        // TODO add your handling code here:
+        JCheckBox[] checkBoxesPrincipales = { chkO1Pri, chkO1Sec, chkO1Seg };
+        
+        int seleccionados = contarSeleccionados(checkBoxesPrincipales);
+    }//GEN-LAST:event_ItemMenuPrincipalesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -384,5 +627,14 @@ public class luces extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JLabel lblLuzOficina1Principal;
+    private javax.swing.JLabel lblLuzOficina1Secundaria;
+    private javax.swing.JLabel lblLuzOficina1Seguridad;
+    private javax.swing.JLabel lblLuzOficina2Primaria;
+    private javax.swing.JLabel lblLuzOficina2Secundaria;
+    private javax.swing.JLabel lblLuzOficina2Seguridad;
+    private javax.swing.JLabel lblLuzOficina3Principal;
+    private javax.swing.JLabel lblLuzOficina3Secundaria;
+    private javax.swing.JLabel lblLuzOficina3Seguridad;
     // End of variables declaration//GEN-END:variables
 }
