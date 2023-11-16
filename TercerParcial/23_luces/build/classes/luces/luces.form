@@ -284,11 +284,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz Secundaria"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO1SecStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkO1Seg">
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz de Seguridad"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO1SegStateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -334,16 +340,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz Principal"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO2PriStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkO2Sec">
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz Secundaria"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO2SecStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkO2Seg">
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz de Seguridad"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO2SegStateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -389,16 +404,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz Principal"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO3PriStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkO3Sec">
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz Secundaria"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO3SecStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkO3Seg">
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz de Seguridad"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO3SegStateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -488,7 +512,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="lblLuzOficina2Primaria" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="lblLuzOficina2Principal" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
@@ -506,7 +530,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="lblLuzOficina2Primaria" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="lblLuzOficina2Principal" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblLuzOficina2Secundaria" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -517,7 +541,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblLuzOficina2Primaria">
+        <Component class="javax.swing.JLabel" name="lblLuzOficina2Principal">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">

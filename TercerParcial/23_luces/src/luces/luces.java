@@ -48,7 +48,7 @@ public class luces extends javax.swing.JFrame {
         lblLuzOficina1Secundaria = new javax.swing.JLabel();
         lblLuzOficina1Seguridad = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        lblLuzOficina2Primaria = new javax.swing.JLabel();
+        lblLuzOficina2Principal = new javax.swing.JLabel();
         lblLuzOficina2Secundaria = new javax.swing.JLabel();
         lblLuzOficina2Seguridad = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
@@ -93,8 +93,18 @@ public class luces extends javax.swing.JFrame {
         });
 
         chkO1Sec.setText("Luz Secundaria");
+        chkO1Sec.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO1SecStateChanged(evt);
+            }
+        });
 
         chkO1Seg.setText("Luz de Seguridad");
+        chkO1Seg.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO1SegStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -123,10 +133,25 @@ public class luces extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Oficina 2"));
 
         chkO2Pri.setText("Luz Principal");
+        chkO2Pri.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO2PriStateChanged(evt);
+            }
+        });
 
         chkO2Sec.setText("Luz Secundaria");
+        chkO2Sec.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO2SecStateChanged(evt);
+            }
+        });
 
         chkO2Seg.setText("Luz de Seguridad");
+        chkO2Seg.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO2SegStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -155,10 +180,25 @@ public class luces extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Oficina 3"));
 
         chkO3Pri.setText("Luz Principal");
+        chkO3Pri.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO3PriStateChanged(evt);
+            }
+        });
 
         chkO3Sec.setText("Luz Secundaria");
+        chkO3Sec.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO3SecStateChanged(evt);
+            }
+        });
 
         chkO3Seg.setText("Luz de Seguridad");
+        chkO3Seg.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO3SegStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -221,7 +261,7 @@ public class luces extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Luces oficina 2"));
 
-        lblLuzOficina2Primaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblLuzOficina2Principal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblLuzOficina2Secundaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -232,7 +272,7 @@ public class luces extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(lblLuzOficina2Primaria, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblLuzOficina2Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
@@ -246,7 +286,7 @@ public class luces extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(lblLuzOficina2Primaria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblLuzOficina2Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblLuzOficina2Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -475,11 +515,52 @@ public class luces extends javax.swing.JFrame {
     URL imageUrlApagado = getClass().getResource("/img/a.jpg");
     ImageIcon imageApagado = new ImageIcon(imageUrlApagado);
     
-    if (chkO1Pri.isSelected()) {
-        lblLuzOficina1Principal.setIcon(imagePrendido);
-    } else {
-        lblLuzOficina1Principal.setIcon(imageApagado);
-    }
+        if (chkO1Pri.isSelected()) {
+            lblLuzOficina1Principal.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina1Principal.setIcon(imageApagado);
+        }
+        if (chkO1Sec.isSelected()) {
+            lblLuzOficina1Secundaria.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina1Secundaria.setIcon(imageApagado);
+        }
+        if (chkO1Seg.isSelected()) {
+            lblLuzOficina1Seguridad.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina1Seguridad.setIcon(imageApagado);
+        }
+        if (chkO2Pri.isSelected()) {
+            lblLuzOficina2Principal.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina2Principal.setIcon(imageApagado);
+        }
+        if (chkO2Sec.isSelected()) {
+            lblLuzOficina2Secundaria.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina2Secundaria.setIcon(imageApagado);
+        }
+        if (chkO2Seg.isSelected()) {
+            lblLuzOficina2Seguridad.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina2Seguridad.setIcon(imageApagado);
+        }
+        if (chkO3Pri.isSelected()) {
+            lblLuzOficina3Principal.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina3Principal.setIcon(imageApagado);
+        }
+        if (chkO3Sec.isSelected()) {
+            lblLuzOficina3Secundaria.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina3Secundaria.setIcon(imageApagado);
+        }
+        if (chkO3Seg.isSelected()) {
+            lblLuzOficina3Seguridad.setIcon(imagePrendido);
+        } else {
+            lblLuzOficina3Seguridad.setIcon(imageApagado);
+        }
+        
     }
      // Método para contar los JCheckBox seleccionados
     private static int contarSeleccionados(JCheckBox[] checkBoxes) {
@@ -617,6 +698,46 @@ public class luces extends javax.swing.JFrame {
         // TODO add your handling code here:
         actualizarImagen();
     }//GEN-LAST:event_chkO1PriStateChanged
+
+    private void chkO1SecStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO1SecStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO1SecStateChanged
+
+    private void chkO1SegStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO1SegStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO1SegStateChanged
+
+    private void chkO2PriStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO2PriStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO2PriStateChanged
+
+    private void chkO2SecStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO2SecStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO2SecStateChanged
+
+    private void chkO2SegStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO2SegStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO2SegStateChanged
+
+    private void chkO3PriStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO3PriStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO3PriStateChanged
+
+    private void chkO3SecStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO3SecStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO3SecStateChanged
+
+    private void chkO3SegStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO3SegStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO3SegStateChanged
     /**
      * @param args the command line arguments
      */
@@ -696,7 +817,7 @@ public class luces extends javax.swing.JFrame {
     private javax.swing.JLabel lblLuzOficina1Principal;
     private javax.swing.JLabel lblLuzOficina1Secundaria;
     private javax.swing.JLabel lblLuzOficina1Seguridad;
-    private javax.swing.JLabel lblLuzOficina2Primaria;
+    private javax.swing.JLabel lblLuzOficina2Principal;
     private javax.swing.JLabel lblLuzOficina2Secundaria;
     private javax.swing.JLabel lblLuzOficina2Seguridad;
     private javax.swing.JLabel lblLuzOficina3Principal;
