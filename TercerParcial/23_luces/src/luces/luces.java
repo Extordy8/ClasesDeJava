@@ -4,9 +4,11 @@
  */
 package luces;
 
+import java.awt.Image;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -254,7 +256,7 @@ public class luces extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(lblLuzOficina1Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblLuzOficina1Secundaria, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                .addComponent(lblLuzOficina1Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblLuzOficina1Seguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -290,7 +292,7 @@ public class luces extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblLuzOficina2Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblLuzOficina2Seguridad, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addComponent(lblLuzOficina2Seguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -325,7 +327,7 @@ public class luces extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblLuzOficina3Secundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblLuzOficina3Seguridad, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addComponent(lblLuzOficina3Seguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -456,6 +458,11 @@ public class luces extends javax.swing.JFrame {
         MenInfo.add(jSeparator3);
 
         ItemMenuAcerca.setText("Acerca de ...");
+        ItemMenuAcerca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuAcercaActionPerformed(evt);
+            }
+        });
         MenInfo.add(ItemMenuAcerca);
 
         jMenuBar1.add(MenInfo);
@@ -498,7 +505,7 @@ public class luces extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(16, Short.MAX_VALUE))
@@ -506,59 +513,77 @@ public class luces extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+    //metodo escalar imagen
+    public static void establecerImagenEscaladaEnLabel(URL imageUrl, JLabel label) {
+        // Cargar la imagen desde la URL
+        ImageIcon originalIcon = new ImageIcon(imageUrl);
+
+        // Obtener la imagen del ImageIcon
+        Image originalImage = originalIcon.getImage();
+
+        // Obtener el tamaño del label
+        int labelWidth = label.getWidth();
+        int labelHeight = label.getHeight();
+
+        // Escalar la imagen para que se ajuste al tamaño del label
+        Image scaledImage = originalImage.getScaledInstance(labelWidth, labelHeight, Image.SCALE_SMOOTH);
+
+        // Crear un nuevo ImageIcon con la imagen escalada
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+
+        // Establecer el nuevo ImageIcon en el label
+        label.setIcon(scaledIcon);
+    }
     //Metodo para actializar imagen
     private void actualizarImagen() {
-        URL image1UrlPrendido = getClass().getResource("/img/p.jpg");
-    ImageIcon imagePrendido = new ImageIcon(image1UrlPrendido);
+    URL image1UrlPrendido = getClass().getResource("/img/p.jpg");
     
     URL imageUrlApagado = getClass().getResource("/img/a.jpg");
-    ImageIcon imageApagado = new ImageIcon(imageUrlApagado);
     
         if (chkO1Pri.isSelected()) {
-            lblLuzOficina1Principal.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido, lblLuzOficina1Principal);
         } else {
-            lblLuzOficina1Principal.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado, lblLuzOficina1Principal);
         }
         if (chkO1Sec.isSelected()) {
-            lblLuzOficina1Secundaria.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido,lblLuzOficina1Secundaria);
         } else {
-            lblLuzOficina1Secundaria.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado,lblLuzOficina1Secundaria);
         }
         if (chkO1Seg.isSelected()) {
-            lblLuzOficina1Seguridad.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido,lblLuzOficina1Seguridad);
         } else {
-            lblLuzOficina1Seguridad.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado,lblLuzOficina1Seguridad);
         }
         if (chkO2Pri.isSelected()) {
-            lblLuzOficina2Principal.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido,lblLuzOficina2Principal);
         } else {
-            lblLuzOficina2Principal.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado,lblLuzOficina2Principal);
         }
         if (chkO2Sec.isSelected()) {
-            lblLuzOficina2Secundaria.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido,lblLuzOficina2Secundaria);
         } else {
-            lblLuzOficina2Secundaria.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado,lblLuzOficina2Secundaria);
         }
         if (chkO2Seg.isSelected()) {
-            lblLuzOficina2Seguridad.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido,lblLuzOficina2Seguridad);
         } else {
-            lblLuzOficina2Seguridad.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado,lblLuzOficina2Seguridad);
         }
         if (chkO3Pri.isSelected()) {
-            lblLuzOficina3Principal.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido,lblLuzOficina3Principal);
         } else {
-            lblLuzOficina3Principal.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado,lblLuzOficina3Principal);
         }
         if (chkO3Sec.isSelected()) {
-            lblLuzOficina3Secundaria.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido,lblLuzOficina3Secundaria);
         } else {
-            lblLuzOficina3Secundaria.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado,lblLuzOficina3Secundaria);
         }
         if (chkO3Seg.isSelected()) {
-            lblLuzOficina3Seguridad.setIcon(imagePrendido);
+            establecerImagenEscaladaEnLabel(image1UrlPrendido,lblLuzOficina3Seguridad);
         } else {
-            lblLuzOficina3Seguridad.setIcon(imageApagado);
+            establecerImagenEscaladaEnLabel(imageUrlApagado,lblLuzOficina3Seguridad);
         }
         
     }
@@ -738,6 +763,11 @@ public class luces extends javax.swing.JFrame {
         // TODO add your handling code here:
         actualizarImagen();
     }//GEN-LAST:event_chkO3SegStateChanged
+
+    private void ItemMenuAcercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuAcercaActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Victor jv");
+    }//GEN-LAST:event_ItemMenuAcercaActionPerformed
     /**
      * @param args the command line arguments
      */

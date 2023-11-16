@@ -153,6 +153,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Acerca de ..."/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ItemMenuAcercaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -224,7 +227,7 @@
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jPanel5" max="32767" attributes="0"/>
+                  <Component id="jPanel5" max="-2" attributes="0"/>
                   <Component id="jPanel6" alignment="0" max="32767" attributes="0"/>
                   <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
               </Group>
@@ -462,7 +465,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="lblLuzOficina1Principal" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblLuzOficina1Secundaria" pref="76" max="32767" attributes="0"/>
+                  <Component id="lblLuzOficina1Secundaria" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblLuzOficina1Seguridad" min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
@@ -534,7 +537,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblLuzOficina2Secundaria" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblLuzOficina2Seguridad" pref="70" max="32767" attributes="0"/>
+                  <Component id="lblLuzOficina2Seguridad" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -605,7 +608,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblLuzOficina3Secundaria" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lblLuzOficina3Seguridad" pref="70" max="32767" attributes="0"/>
+                  <Component id="lblLuzOficina3Seguridad" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
