@@ -4,7 +4,10 @@
  */
 package luces;
 
+import java.net.URL;
+import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -83,6 +86,11 @@ public class luces extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Oficina 1"));
 
         chkO1Pri.setText("Luz Principal");
+        chkO1Pri.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                chkO1PriStateChanged(evt);
+            }
+        });
 
         chkO1Sec.setText("Luz Secundaria");
 
@@ -391,9 +399,19 @@ public class luces extends javax.swing.JFrame {
         MenInfo.add(ItemMenuPrincipales);
 
         ItemMenuSecundarias.setText("Secundarias");
+        ItemMenuSecundarias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuSecundariasActionPerformed(evt);
+            }
+        });
         MenInfo.add(ItemMenuSecundarias);
 
         ItemMenuSeguridad.setText("Seguridad");
+        ItemMenuSeguridad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemMenuSeguridadActionPerformed(evt);
+            }
+        });
         MenInfo.add(ItemMenuSeguridad);
         MenInfo.add(jSeparator3);
 
@@ -448,7 +466,34 @@ public class luces extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    //Metodo para actializar imagen
+    private void actualizarImagen() {
+        URL image1UrlPrendido = getClass().getResource("/img/p.jpg");
+    ImageIcon imagePrendido = new ImageIcon(image1UrlPrendido);
+    
+    URL imageUrlApagado = getClass().getResource("/img/a.jpg");
+    ImageIcon imageApagado = new ImageIcon(imageUrlApagado);
+    
+    if (chkO1Pri.isSelected()) {
+        lblLuzOficina1Principal.setIcon(imagePrendido);
+    } else {
+        lblLuzOficina1Principal.setIcon(imageApagado);
+    }
+    }
+     // Método para contar los JCheckBox seleccionados
+    private static int contarSeleccionados(JCheckBox[] checkBoxes) {
+        int contador = 0;
 
+        for (JCheckBox checkBox : checkBoxes) {
+            if (checkBox.isSelected()) {
+                contador++;
+            }
+        }
+
+        return contador;
+    }
+    
     private void ItemMenuApagarTodasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuApagarTodasActionPerformed
         // TODO add your handling code here:
         chkO1Pri.setSelected(false);
@@ -546,11 +591,32 @@ public class luces extends javax.swing.JFrame {
 
     private void ItemMenuPrincipalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuPrincipalesActionPerformed
         // TODO add your handling code here:
-        JCheckBox[] checkBoxesPrincipales = { chkO1Pri, chkO1Sec, chkO1Seg };
+        JCheckBox[] checkBoxesPrincipales = { chkO1Pri, chkO2Pri, chkO3Pri };
         
         int seleccionados = contarSeleccionados(checkBoxesPrincipales);
+        JOptionPane.showMessageDialog(null, "las luces principales prendidas son : "+ seleccionados);
     }//GEN-LAST:event_ItemMenuPrincipalesActionPerformed
 
+    private void ItemMenuSecundariasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuSecundariasActionPerformed
+        // TODO add your handling code here:
+        JCheckBox[] checkBoxesPrincipales = { chkO1Sec, chkO2Sec, chkO3Sec };
+        
+        int seleccionados = contarSeleccionados(checkBoxesPrincipales);
+        JOptionPane.showMessageDialog(null, "las luces secundarias prendidas son : "+ seleccionados);
+    }//GEN-LAST:event_ItemMenuSecundariasActionPerformed
+
+    private void ItemMenuSeguridadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemMenuSeguridadActionPerformed
+        // TODO add your handling code here:
+        JCheckBox[] checkBoxesPrincipales = { chkO1Seg, chkO2Seg, chkO3Seg };
+        
+        int seleccionados = contarSeleccionados(checkBoxesPrincipales);
+        JOptionPane.showMessageDialog(null, "las luces de seguridad prendidas son : "+ seleccionados);
+    }//GEN-LAST:event_ItemMenuSeguridadActionPerformed
+
+    private void chkO1PriStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkO1PriStateChanged
+        // TODO add your handling code here:
+        actualizarImagen();
+    }//GEN-LAST:event_chkO1PriStateChanged
     /**
      * @param args the command line arguments
      */
@@ -577,7 +643,7 @@ public class luces extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(luces.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+            
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

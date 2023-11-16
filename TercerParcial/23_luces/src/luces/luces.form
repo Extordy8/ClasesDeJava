@@ -135,11 +135,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Secundarias"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ItemMenuSecundariasActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="ItemMenuSeguridad">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Seguridad"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ItemMenuSeguridadActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="jSeparator3">
             </MenuItem>
@@ -270,6 +276,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Luz Principal"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chkO1PriStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkO1Sec">
           <Properties>
